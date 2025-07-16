@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% if todo.completed == True %}
+    {% include './icons/check2-square.svg'%}
+{% else %}
+    {% include './icons/square.svg'%}
+{% endif %}
+<article class="todo-single">
+    <aside class="actions">
+        <a href="{% url 'edit_todo' todo.id %}">{% include "./icons/pencil.svg" %}</a>
+    </aside>
+    <time>
+        {{ todo.created_date }}
+    </time>
+    <h1>
+        {{ todo.todo_title }}
+    </h1>
+    <p>
+    {{ todo.todo_description }}
+    </p>
+</article>
+
+{% endblock %}

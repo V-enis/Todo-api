@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <form method="POST">
+        {% csrf_token %}
+        {{ form }}
+        <button type="submit">save</button>
+    </form>
+    <div class="incomplete">
+        <div class="class-container">
+            <p class="todo-class">Incomplete{% include './icons/chevron-down.svg'%}</p>
+        </div>
+        
+         {% for item in todos %}
+         {% if item.completed == False %}
+            <div class="todo-view">
+                <h1 class="incomplete-todo todo-title">
+                <a href="{% url 'toggle_status' item.id %}">{% include './icons/square.svg' %}</a>
+                <a href="{% url 'todo_detail' item.id %}">{{ item.todo_title }}</a></h1></h1>
+                <div class="todo-content">
+                    <p class="todo-description">{{ item.todo_description }}</p>
+                    <a href="{% url 'delete_todo' item.id %}"><button>Delete</button></a>
+                </div>  
+                <time>{{ item.created_date }}</time>
+                </div>
+            {% endif %}
+    {% endfor %}
+    </div>
+    <div class="complete">
+        <div class="class-container">
+            <p class="todo-class">Complete{% include './icons/chevron-down.svg'%}</p>
+        </div>
+         {% for item in todos %}
+         {% if item.completed == True %}
+            <div class="todo-view">
+                <h1 class="completed-todo todo-title">
+                <a href="{% url 'toggle_status' item.id %}">{% include './icons/check2-square.svg '%}</a>
+                <a href="{% url 'todo_detail' item.id %}">{{ item.todo_title }}</a></h1>
+                <div class="todo-content">
+                    <p class="completed-todo todo-description">{{ item.todo_description }}</p>
+                    <a href="{% url 'delete_todo' item.id %}"><button>Delete</button></a>
+                </div>
+                <time>{{ item.created_date }}</time>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+{% endblock  %}
