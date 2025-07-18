@@ -7,6 +7,8 @@ A simple Django project to practice building a To-Do application with:
 - Django Crispy Forms using Bootstrap 4 for form styling
 
 ---
+***Preview***
+![App Screenshot](images/todo_preview.png)
 
 ## Features
 
