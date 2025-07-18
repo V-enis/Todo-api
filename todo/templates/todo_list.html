@@ -1,10 +1,11 @@
 {% extends 'base.html' %}
+{% load crispy_forms_tags %}
 
 {% block content %}
     <form method="POST">
         {% csrf_token %}
-        {{ form }}
-        <button type="submit">save</button>
+        {{ form|crispy }}
+        <button type="submit" class="buttons">save</button>
     </form>
     <div class="incomplete">
         <div class="class-container">
@@ -19,7 +20,7 @@
                 <a href="{% url 'todo_detail' item.id %}">{{ item.todo_title }}</a></h1></h1>
                 <div class="todo-content">
                     <p class="todo-description">{{ item.todo_description }}</p>
-                    <a href="{% url 'delete_todo' item.id %}"><button>Delete</button></a>
+                    <a href="{% url 'delete_todo' item.id %}"><button class="buttons">Delete</button></a>
                 </div>  
                 <time>{{ item.created_date }}</time>
                 </div>
@@ -38,7 +39,7 @@
                 <a href="{% url 'todo_detail' item.id %}">{{ item.todo_title }}</a></h1>
                 <div class="todo-content">
                     <p class="completed-todo todo-description">{{ item.todo_description }}</p>
-                    <a href="{% url 'delete_todo' item.id %}"><button>Delete</button></a>
+                    <a href="{% url 'delete_todo' item.id %}"><button class="buttons">Delete</button></a>
                 </div>
                 <time>{{ item.created_date }}</time>
                 </div>

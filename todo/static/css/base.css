@@ -83,7 +83,6 @@ a:active {
   color: rgb(41, 41, 41);
 }
 
-
 .todo-class {
     font-weight: bold;
     color: rgb(216, 88, 110);
@@ -100,7 +99,7 @@ a:active {
     width: 100%;
 }
 
-button {
+.buttons {
     border-radius: 10px;
     background-color: rgb(107, 185, 76);
     color: white;
@@ -108,3 +107,19 @@ button {
     border: none;
     margin: 4px;
 }
+
+input.form-control {
+    border-radius: 12px;
+}
+
+textarea.form-control {
+    height: 70px !important;
+    border-radius: 15px;
+}
+
+.title-link:link, .title-link:hover, .title-link:visited {
+    color: white;
+    text-decoration: none;
+}
+
+

@@ -1,0 +1,91 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtualenv
+venv/
+.env/
+.venv/
+env/
+ENV/
+env.bak/
+*.env
+
+# Django
+*.log
+*.pot
+*.pyc
+db.sqlite3
+db.sqlite3-journal
+media/
+staticfiles/
+local_settings.py
+
+# Django migration artifacts
+*/migrations/__pycache__/
+*/migrations/*.pyc
+*/migrations/*.pyo
+*/migrations/*.log
+
+# If you're using Django's collectstatic
+/static/
+
+# VSCode / IDEs
+.vscode/
+.idea/
+*.swp
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Test/coverage tools
+.coverage
+htmlcov/
+.tox/
+.nox/
+.cache/
+.pytest_cache/
+
+# MyPy, Pyright, etc.
+.mypy_cache/
+.pyre/
+.dmypy.json
+
+# Build artifacts
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+
+# Node/npm (if you're using Tailwind or npm-managed assets)
+node_modules/
+package-lock.json
+npm-debug.log
+yarn-error.log
+.pnpm-debug.log
+
+# Compiled frontend files (if applicable)
+*.map
+*.css
+*.min.js
+
+# MacOS metadata
+*.DS_Store
+
+# JetBrains
+.idea/
+*.iml
+
+# SQLite backups or temporary files
+*.sqlite3
+*.sqlite3-journal
+*.bak
