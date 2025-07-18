@@ -28,62 +28,10 @@ local_settings.py
 */migrations/*.pyo
 */migrations/*.log
 
-# If you're using Django's collectstatic
-/static/
-
 # VSCode / IDEs
 .vscode/
 .idea/
 *.swp
-
-# OS Files
-.DS_Store
-Thumbs.db
-
-# Test/coverage tools
-.coverage
-htmlcov/
-.tox/
-.nox/
-.cache/
-.pytest_cache/
-
-# MyPy, Pyright, etc.
-.mypy_cache/
-.pyre/
-.dmypy.json
-
-# Build artifacts
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-
-# Node/npm (if you're using Tailwind or npm-managed assets)
-node_modules/
-package-lock.json
-npm-debug.log
-yarn-error.log
-.pnpm-debug.log
-
-# Compiled frontend files (if applicable)
-*.map
-*.css
-*.min.js
-
-# MacOS metadata
-*.DS_Store
-
-# JetBrains
-.idea/
-*.iml
 
 # SQLite backups or temporary files
 *.sqlite3
